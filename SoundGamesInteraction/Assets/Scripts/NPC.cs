@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour
     public AudioClip idleSound;
     public AudioClip positiveSound;
     public AudioClip negativeSound;
+    public AudioClip huhSound;
 
     public float interactionRange;
 
@@ -15,6 +16,7 @@ public class NPC : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = idleSound;
+        audioSource.loop = true;
         GetComponent<SphereCollider>().radius = interactionRange;
     }
 
@@ -22,14 +24,39 @@ public class NPC : MonoBehaviour
     {
         audioSource.Stop();
         audioSource.clip = positiveSound;
+        audioSource.loop = false;
         audioSource.Play();
+
+        GetComponent<SphereCollider>().enabled = false;
+        this.enabled = false;
     }
 
     public void PlayNegativeSound()
     {
         audioSource.Stop();
         audioSource.clip = negativeSound;
+        audioSource.loop = false;
         audioSource.Play();
+
+        GetComponent<SphereCollider>().enabled = false;
+        this.enabled = false;
+    }
+
+    public void PlayerComesClose()
+    {
+        audioSource.Stop();
+        audioSource.clip = huhSound;
+        audioSource.loop = false;
+        audioSource.Play();
+    }
+
+    public void PlayerMovesAway()
+    {
+        audioSource.Stop();
+        audioSource.clip = idleSound;
+        audioSource.loop = true;
+        audioSource.Play();
+      
     }
 
     private void OnDrawGizmos()

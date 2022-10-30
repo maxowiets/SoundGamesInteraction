@@ -45,6 +45,7 @@ public class PlayerInteraction : MonoBehaviour
     void EnableInteraction(NPC npc)
     {
         closeByNPC = npc;
+        npc.PlayerComesClose();
         positiveText.SetActive(true);
         negativeText.SetActive(true);
         Debug.Log(npc.gameObject.name + " is interactable");
@@ -53,6 +54,7 @@ public class PlayerInteraction : MonoBehaviour
     void DisableInteraction()
     {
         Debug.Log("Interaction Disabled");
+        closeByNPC?.PlayerMovesAway();
         closeByNPC = null;
         positiveText.SetActive(false);
         negativeText.SetActive(false);

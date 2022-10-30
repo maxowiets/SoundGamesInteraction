@@ -6,57 +6,84 @@ public class NPC : MonoBehaviour
 {
     AudioSource audioSource;
     public AudioClip idleSound;
+    public AudioClip majorClip;
+    public AudioClip minorClip;
     public AudioClip positiveSound;
     public AudioClip negativeSound;
     public AudioClip huhSound;
 
     public float interactionRange;
 
+    bool playerInteracted = false;
+
+    PlayerMovement playerMovement;
+
     private void Awake()
     {
+        playerMovement = FindObjectOfType<PlayerMovement>();
+
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = idleSound;
         audioSource.loop = true;
+        audioSource.Play();
         GetComponent<SphereCollider>().radius = interactionRange;
     }
 
-    public void PlayPositiveSound()
+    public void PlayMajorSound()
     {
-        audioSource.Stop();
-        audioSource.clip = positiveSound;
-        audioSource.loop = false;
-        audioSource.Play();
+        Debug.Log("PlayerMajorS9ound");
+        PlaySound(majorClip, false);
 
-        GetComponent<SphereCollider>().enabled = false;
-        this.enabled = false;
+        playerMovement.enabled = false;
+
+        playerInteracted = true;
+        GetComponent<SphereCollider>().radius = 0;
+        GetComponent<SphereCollider>().isTrigger = false;
+
+        Invoke("PlayPositiveSound", 18);
     }
 
-    public void PlayNegativeSound()
+    public void PlayMinorSound()
     {
-        audioSource.Stop();
-        audioSource.clip = negativeSound;
-        audioSource.loop = false;
-        audioSource.Play();
+        PlaySound(minorClip, false);
 
-        GetComponent<SphereCollider>().enabled = false;
-        this.enabled = false;
+        playerMovement.enabled = false;
+
+        playerInteracted = true;
+        GetComponent<SphereCollider>().radius = 0;
+        GetComponent<SphereCollider>().isTrigger = false;
+
+        Invoke("PlayNegativeSound", 22);
+    }
+
+    void PlayPositiveSound()
+    {
+        PlaySound(positiveSound, false);
+        playerMovement.enabled = true;
+    }
+
+    void PlayNegativeSound()
+    {
+        PlaySound(negativeSound, false);
+        playerMovement.enabled = true;
     }
 
     public void PlayerComesClose()
     {
-        audioSource.Stop();
-        audioSource.clip = huhSound;
-        audioSource.loop = false;
-        audioSource.Play();
+        PlaySound(huhSound, false);
     }
 
     public void PlayerMovesAway()
     {
+        if (!playerInteracted) PlaySound(idleSound, true);
+    }
+
+    void PlaySound(AudioClip clip, bool loop)
+    {
         audioSource.Stop();
-        audioSource.clip = idleSound;
-        audioSource.loop = true;
+        audioSource.clip = clip;
+        audioSource.loop = loop;
         audioSource.Play();
-      
     }
 
     private void OnDrawGizmos()

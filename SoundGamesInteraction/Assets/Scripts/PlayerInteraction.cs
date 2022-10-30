@@ -9,8 +9,12 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject negativeText;
 
     AudioSource audioSource;
+    public AudioClip majorClip;
+    public AudioClip minorClip;
     public AudioClip positiveClip;
     public AudioClip negativeClip;
+
+    public AudioClip InteractionSound;
 
     NPC closeByNPC = null;
 
@@ -64,19 +68,21 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            Debug.Log("Playing Positive Sound");
-            closeByNPC.PlayPositiveSound();
+            Debug.Log("Playing Major Sound");
+            closeByNPC.PlayMajorSound();
             audioSource.Stop();
-            audioSource.clip = positiveClip;
-            audioSource.Play();
+            audioSource.PlayOneShot(InteractionSound);
+            //audioSource.clip = majorClip;
+            //audioSource.Play();
         }
         if (Input.GetKey(KeyCode.Mouse1))
         {
-            Debug.Log("Playing Negative Sound");
-            closeByNPC.PlayNegativeSound();
+            Debug.Log("Playing Minor Sound");
+            closeByNPC.PlayMinorSound();
             audioSource.Stop();
-            audioSource.clip = positiveClip;
-            audioSource.Play();
+            audioSource.PlayOneShot(InteractionSound);
+            //audioSource.clip = minorClip;
+            //audioSource.Play();
         }
     }
 }

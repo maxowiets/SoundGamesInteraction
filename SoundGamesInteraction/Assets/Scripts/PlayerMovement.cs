@@ -34,11 +34,20 @@ public class PlayerMovement : MonoBehaviour
                 audioSource.Play();
             }
         }
+        else
+        {
+            audioSource.Stop();
+        }
     }
 
     void RotatePlayer()
     {
         if (Input.GetKey(KeyCode.Q)) transform.Rotate(new Vector3(0, -rotationSpeed * Time.deltaTime));
         if (Input.GetKey(KeyCode.E)) transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime));
+    }
+
+    private void OnDisable()
+    {
+        audioSource.Stop();
     }
 }

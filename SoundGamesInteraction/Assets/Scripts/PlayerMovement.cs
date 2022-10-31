@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     AudioSource audioSource;
-    public AudioClip walkingSound;
+    //public AudioClip walkingSound;
     public float rotationSpeed;
     public float moveSpeed;
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.clip = walkingSound;
+        /*audioSource = GetComponent<AudioSource>();
+        audioSource.clip = walkingSound;*/
     }
 
     private void Update()
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A)) transform.position += transform.right * -moveSpeed * Time.deltaTime;
         if (Input.GetKey(KeyCode.S)) transform.position += transform.forward * -moveSpeed * Time.deltaTime;
         if (Input.GetKey(KeyCode.D)) transform.position += transform.right * moveSpeed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        /*if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             if (!audioSource.isPlaying)
             {
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             audioSource.Stop();
-        }
+        }*/
     }
 
     void RotatePlayer()

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -178,7 +178,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 15
   Pan2D: 0
@@ -227,7 +227,7 @@ AudioSource:
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0.06666667
+      value: 0
       inSlope: -0.06669331
       outSlope: -0.06669331
       tangentMode: 0
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0a32129f78205439fcf332066ff875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSound: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
+  idleSound: {fileID: 8300000, guid: f04bc57a4ab9395438d11dc179b321a3, type: 3}
   majorClip: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
   minorClip: {fileID: 8300000, guid: dd5b8db945fd8e74d941c58dfddd06e3, type: 3}
   positiveSound: {fileID: 8300000, guid: e2653cf87b6686b4c9258f1caffed955, type: 3}
@@ -482,7 +482,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 15
   Pan2D: 0
@@ -531,7 +531,7 @@ AudioSource:
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0.06666667
+      value: 0
       inSlope: -0.06669331
       outSlope: -0.06669331
       tangentMode: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0a32129f78205439fcf332066ff875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSound: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
+  idleSound: {fileID: 8300000, guid: f04bc57a4ab9395438d11dc179b321a3, type: 3}
   majorClip: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
   minorClip: {fileID: 8300000, guid: dd5b8db945fd8e74d941c58dfddd06e3, type: 3}
   positiveSound: {fileID: 8300000, guid: e2653cf87b6686b4c9258f1caffed955, type: 3}
@@ -692,7 +692,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 15
   Pan2D: 0
@@ -741,7 +741,7 @@ AudioSource:
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0.06666667
+      value: 0
       inSlope: -0.06669331
       outSlope: -0.06669331
       tangentMode: 0
@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0a32129f78205439fcf332066ff875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSound: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
+  idleSound: {fileID: 8300000, guid: 0f3e0d0c661828d45a971d0690122ddb, type: 3}
   majorClip: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
   minorClip: {fileID: 8300000, guid: dd5b8db945fd8e74d941c58dfddd06e3, type: 3}
   positiveSound: {fileID: 8300000, guid: e2653cf87b6686b4c9258f1caffed955, type: 3}
@@ -933,7 +933,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 15
   Pan2D: 0
@@ -982,7 +982,7 @@ AudioSource:
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0.06666667
+      value: 0
       inSlope: -0.06669331
       outSlope: -0.06669331
       tangentMode: 0
@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0a32129f78205439fcf332066ff875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSound: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
+  idleSound: {fileID: 8300000, guid: f04bc57a4ab9395438d11dc179b321a3, type: 3}
   majorClip: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
   minorClip: {fileID: 8300000, guid: dd5b8db945fd8e74d941c58dfddd06e3, type: 3}
   positiveSound: {fileID: 8300000, guid: e2653cf87b6686b4c9258f1caffed955, type: 3}
@@ -1206,7 +1206,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 15
   Pan2D: 0
@@ -1255,7 +1255,7 @@ AudioSource:
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0.06666667
+      value: 0
       inSlope: -0.06669331
       outSlope: -0.06669331
       tangentMode: 0
@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0a32129f78205439fcf332066ff875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSound: {fileID: 8300000, guid: f04bc57a4ab9395438d11dc179b321a3, type: 3}
+  idleSound: {fileID: 8300000, guid: 0f3e0d0c661828d45a971d0690122ddb, type: 3}
   majorClip: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
   minorClip: {fileID: 8300000, guid: dd5b8db945fd8e74d941c58dfddd06e3, type: 3}
   positiveSound: {fileID: 8300000, guid: e2653cf87b6686b4c9258f1caffed955, type: 3}

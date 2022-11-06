@@ -6,6 +6,7 @@ public class NPC : MonoBehaviour
 {
     AudioSource audioSource;
     public AudioClip idleSound;
+    public bool wantsMajorSound = false;
     public AudioClip majorClip;
     public AudioClip minorClip;
     public AudioClip positiveSound;
@@ -13,68 +14,55 @@ public class NPC : MonoBehaviour
     public AudioClip huhSound;
 
     public float interactionRange;
+    public bool playerIsClose;
 
     bool playerInteracted = false;
 
-    GlobularMovement globularMovement;
-
     private void Awake()
     {
-        globularMovement = FindObjectOfType<GlobularMovement>();
-
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = idleSound;
-        audioSource.loop = true;
-        audioSource.Play();
         GetComponent<SphereCollider>().radius = interactionRange;
+
+        PlaySound(idleSound, true);
     }
 
     public void PlayMajorSound()
     {
         PlaySound(majorClip, false);
-
-        globularMovement.enabled = false;
-
         playerInteracted = true;
-
-        Destroy(GetComponent<SphereCollider>());
-
-        Invoke("PlayPositiveSound", majorClip.length + 1);
     }
 
     public void PlayMinorSound()
     {
         PlaySound(minorClip, false);
-
-        globularMovement.enabled = false;
-
         playerInteracted = true;
-
-        Destroy(GetComponent<SphereCollider>());
-
-        Invoke("PlayNegativeSound", minorClip.length);
     }
 
-    void PlayPositiveSound()
+    public void PlayPositiveSound()
     {
         PlaySound(positiveSound, false);
-        globularMovement.enabled = true;
+        Destroy(transform.parent.gameObject, positiveSound.length);
     }
 
-    void PlayNegativeSound()
+    public void PlayNegativeSound()
     {
         PlaySound(negativeSound, false);
-        globularMovement.enabled = true;
+        Destroy(transform.parent.gameObject, negativeSound.length);
     }
 
     public void PlayerComesClose()
     {
         PlaySound(huhSound, false);
+        playerIsClose = true;
     }
 
     public void PlayerMovesAway()
     {
-        if (!playerInteracted) PlaySound(idleSound, true);
+        if (!playerInteracted) 
+        { 
+            PlaySound(idleSound, true);
+            playerIsClose = false;
+        }
     }
 
     void PlaySound(AudioClip clip, bool loop)

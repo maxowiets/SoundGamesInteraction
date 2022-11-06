@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 51
+  controlID: 102
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 39
+  controlID: 103
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 40
+  controlID: 104
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,22 +343,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Github\Projects\SoundGamesInteraction\SoundGamesInteraction
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 20590000
-    m_LastClickedID: 22816
-    m_ExpandedIDs: 0000000014590000205900002259000000ca9a3b
+    m_SelectedIDs: 6e590000
+    m_LastClickedID: 22894
+    m_ExpandedIDs: 0000000066590000705900007259000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -386,7 +386,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000014590000
+    m_ExpandedIDs: 0000000066590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -516,21 +516,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8e1effffcc21ffffac81ffff5485ffff2e8affffb08dffffca96fffff098ffff32a4ffff7ce4ffffc0ebffff38fbffff865800005e5c0000385f0000665f0000865f0000985f00009c5f0000ba5f0000be5f0000
+      m_ExpandedIDs: 5016ffff3c17ffff9617ffff701effffc820ffff6622ffffde22ffffae25ffff4c78ffff587effff36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: NPCSource
-        m_OriginalName: NPCSource
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 24440
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 4
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -765,9 +765,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 14.7388, y: 6.4328604, z: -0.44242477}
+    m_Target: {x: -2.080821, y: 0.39437914, z: -3.324687}
     speed: 2
-    m_Value: {x: 14.7388, y: 6.4328604, z: -0.44242477}
+    m_Value: {x: -2.080821, y: 0.39437914, z: -3.324687}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -814,13 +814,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08838136, y: 0.68141043, z: -0.083395444, w: -0.72182685}
+    m_Target: {x: 0.026487611, y: 0.95376223, z: -0.2860038, w: 0.089332744}
     speed: 2
-    m_Value: {x: -0.088376045, y: 0.6813695, z: -0.08339044, w: -0.72178346}
+    m_Value: {x: 0.026485723, y: 0.9536942, z: -0.2859834, w: 0.089326374}
   m_Size:
-    m_Target: 21.465178
+    m_Target: 31.233925
     speed: 2
-    m_Value: 21.465178
+    m_Value: 31.233925
   m_Ortho:
     m_Target: 0
     speed: 2

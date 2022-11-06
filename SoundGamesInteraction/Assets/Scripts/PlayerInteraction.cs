@@ -5,25 +5,27 @@ using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    GlobularMovement globularMovement;
     AudioSource audioSource;
     public AudioClip majorClip;
     public AudioClip minorClip;
     public AudioClip positiveClip;
     public AudioClip negativeClip;
 
-    public AudioClip InteractionSound;
-
     NPC closeByNPC = null;
+
+    public bool isInteracting = false;
 
     private void Awake()
     {
+        globularMovement = FindObjectOfType<GlobularMovement>();
         audioSource = GetComponent<AudioSource>();
         DisableInteraction();
     }
 
     private void Update()
     {
-        if (closeByNPC != null)
+        if (closeByNPC != null && !isInteracting)
         {
             InteractWithNPC();
         }
@@ -31,10 +33,13 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        NPC hitNPC = other.GetComponent<NPC>();
-        if (hitNPC != null)
+        if (other.GetComponent<NPC>())
         {
-            EnableInteraction(hitNPC);
+            NPC hitNPC = other.GetComponent<NPC>();
+            if (hitNPC != null)
+            {
+                EnableInteraction(hitNPC);
+            }
         }
     }
 
@@ -59,19 +64,63 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            closeByNPC.PlayMajorSound();
-            audioSource.Stop();
-            audioSource.PlayOneShot(InteractionSound);
-            //audioSource.clip = majorClip;
-            //audioSource.Play();
+            StartCoroutine(PlayMajor());
         }
         if (Input.GetKey(KeyCode.Mouse1))
         {
-            closeByNPC.PlayMinorSound();
-            audioSource.Stop();
-            audioSource.PlayOneShot(InteractionSound);
-            //audioSource.clip = minorClip;
-            //audioSource.Play();
+            StartCoroutine(PlayMinor());
         }
+    }
+
+    IEnumerator PlayMajor()
+    {
+        globularMovement.enabled = false;
+        isInteracting = true;
+        audioSource.clip = majorClip;
+        audioSource.Play();
+        yield return new WaitForSeconds(majorClip.length);
+
+        if (closeByNPC.wantsMajorSound)
+        {
+            closeByNPC.PlayMajorSound();
+            yield return new WaitForSeconds(closeByNPC.majorClip.length + 1f);
+
+            closeByNPC.PlayPositiveSound();
+            yield return new WaitForSeconds(closeByNPC.positiveSound.length);
+        }
+        else
+        {
+            closeByNPC.PlayNegativeSound();
+            yield return new WaitForSeconds(closeByNPC.negativeSound.length);
+        }
+
+        isInteracting = false;
+        globularMovement.enabled = true;
+    }
+
+    IEnumerator PlayMinor()
+    {
+        globularMovement.enabled = false;
+        isInteracting = true;
+        audioSource.clip = minorClip;
+        audioSource.Play();
+        yield return new WaitForSeconds(minorClip.length);
+
+        if (!closeByNPC.wantsMajorSound)
+        {
+            closeByNPC.PlayMinorSound();
+            yield return new WaitForSeconds(closeByNPC.minorClip.length + 1f);
+
+            closeByNPC.PlayPositiveSound();
+            yield return new WaitForSeconds(closeByNPC.positiveSound.length);
+        }
+        else
+        {
+            closeByNPC.PlayNegativeSound();
+            yield return new WaitForSeconds(closeByNPC.negativeSound.length);
+        }
+
+        isInteracting = false;
+        globularMovement.enabled = true;
     }
 }

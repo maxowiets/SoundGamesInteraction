@@ -16,11 +16,11 @@ public class NPC : MonoBehaviour
 
     bool playerInteracted = false;
 
-    PlayerMovement playerMovement;
+    GlobularMovement globularMovement;
 
     private void Awake()
     {
-        playerMovement = FindObjectOfType<PlayerMovement>();
+        globularMovement = FindObjectOfType<GlobularMovement>();
 
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = idleSound;
@@ -31,41 +31,40 @@ public class NPC : MonoBehaviour
 
     public void PlayMajorSound()
     {
-        Debug.Log("PlayerMajorS9ound");
         PlaySound(majorClip, false);
 
-        playerMovement.enabled = false;
+        globularMovement.enabled = false;
 
         playerInteracted = true;
-        GetComponent<SphereCollider>().radius = 0;
-        GetComponent<SphereCollider>().isTrigger = false;
 
-        Invoke("PlayPositiveSound", 18);
+        Destroy(GetComponent<SphereCollider>());
+
+        Invoke("PlayPositiveSound", majorClip.length + 1);
     }
 
     public void PlayMinorSound()
     {
         PlaySound(minorClip, false);
 
-        playerMovement.enabled = false;
+        globularMovement.enabled = false;
 
         playerInteracted = true;
-        GetComponent<SphereCollider>().radius = 0;
-        GetComponent<SphereCollider>().isTrigger = false;
 
-        Invoke("PlayNegativeSound", 22);
+        Destroy(GetComponent<SphereCollider>());
+
+        Invoke("PlayNegativeSound", minorClip.length);
     }
 
     void PlayPositiveSound()
     {
         PlaySound(positiveSound, false);
-        playerMovement.enabled = true;
+        globularMovement.enabled = true;
     }
 
     void PlayNegativeSound()
     {
         PlaySound(negativeSound, false);
-        playerMovement.enabled = true;
+        globularMovement.enabled = true;
     }
 
     public void PlayerComesClose()

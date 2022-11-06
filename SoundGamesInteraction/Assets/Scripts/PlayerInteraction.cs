@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public GameObject positiveText;
-    public GameObject negativeText;
-
     AudioSource audioSource;
     public AudioClip majorClip;
     public AudioClip minorClip;
@@ -50,25 +47,18 @@ public class PlayerInteraction : MonoBehaviour
     {
         closeByNPC = npc;
         npc.PlayerComesClose();
-        positiveText.SetActive(true);
-        negativeText.SetActive(true);
-        Debug.Log(npc.gameObject.name + " is interactable");
     }
 
     void DisableInteraction()
     {
-        Debug.Log("Interaction Disabled");
         closeByNPC?.PlayerMovesAway();
         closeByNPC = null;
-        positiveText.SetActive(false);
-        negativeText.SetActive(false);
     }
 
     void InteractWithNPC()
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            Debug.Log("Playing Major Sound");
             closeByNPC.PlayMajorSound();
             audioSource.Stop();
             audioSource.PlayOneShot(InteractionSound);
@@ -77,7 +67,6 @@ public class PlayerInteraction : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Mouse1))
         {
-            Debug.Log("Playing Minor Sound");
             closeByNPC.PlayMinorSound();
             audioSource.Stop();
             audioSource.PlayOneShot(InteractionSound);

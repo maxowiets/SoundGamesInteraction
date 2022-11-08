@@ -147,10 +147,11 @@ MonoBehaviour:
   wantsMajorSound: 1
   majorClip: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
   minorClip: {fileID: 8300000, guid: dd5b8db945fd8e74d941c58dfddd06e3, type: 3}
-  positiveSound: {fileID: 8300000, guid: e2653cf87b6686b4c9258f1caffed955, type: 3}
+  positiveSound: {fileID: 8300000, guid: 845b72592dd57b64599430b23cba05b1, type: 3}
   negativeSound: {fileID: 8300000, guid: 94c630e424033b1488d868a54cc5fd18, type: 3}
-  huhSound: {fileID: 8300000, guid: acd4d6ad083200e4291b0630e091dc0a, type: 3}
+  huhSound: {fileID: 8300000, guid: 242fded8d5db7b9488859c647137acbc, type: 3}
   interactionRange: 2
+  playerIsClose: 0
 --- !u!82 &1176896984775496453
 AudioSource:
   m_ObjectHideFlags: 0

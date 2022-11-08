@@ -158,15 +158,15 @@ MonoBehaviour:
   globularMovement: {fileID: 1585057941}
   playerInteraction: {fileID: 443501563}
   narratorClips:
-  - {fileID: 8300000, guid: 1257d3cd9f7d8af469e5da2fb8065ea2, type: 3}
-  - {fileID: 8300000, guid: 95d587672d3512c4aab33b317b15d6c2, type: 3}
-  - {fileID: 8300000, guid: 1436400a8fba88749b5a9cd375d61615, type: 3}
-  - {fileID: 8300000, guid: 85c0e6ae855034a4c96ff13fa85e281a, type: 3}
-  - {fileID: 8300000, guid: 6859ecc95802e114f9ada0836b6882bd, type: 3}
-  - {fileID: 8300000, guid: 0b2625fec08edad4f99219fec552e320, type: 3}
-  - {fileID: 8300000, guid: 4ad85fcf432c51a45a90643a9d46f05f, type: 3}
-  - {fileID: 8300000, guid: b7981690adeefa84f9ab9c47d64d5d99, type: 3}
-  ambientSoundClip: {fileID: 8300000, guid: 1a09bc055e298a84985fc26526b98d65, type: 3}
+  - {fileID: 8300000, guid: 1ad0c4631cc4f5e468797066f9bd6a2d, type: 3}
+  - {fileID: 8300000, guid: 200984d33c6ec334cbb41db42c66e85c, type: 3}
+  - {fileID: 8300000, guid: fcd2268460b1b254b95e45cde0e2b016, type: 3}
+  - {fileID: 8300000, guid: 56dd7cc4a1376e54ea75a85531327e73, type: 3}
+  - {fileID: 8300000, guid: f0ce257f2f098724e8afdf53e9a58937, type: 3}
+  - {fileID: 8300000, guid: 6d267532c7eaa534d9f4a2909128ad8d, type: 3}
+  - {fileID: 8300000, guid: 45f08151168a754498acc2fc388adafd, type: 3}
+  - {fileID: 8300000, guid: 0bb9a76ed2b62c942b9ed2d563c2882b, type: 3}
+  ambientSoundClip: {fileID: 8300000, guid: 5816f76cc1a2ecf42b55831a50673c22, type: 3}
 --- !u!4 &371712620
 Transform:
   m_ObjectHideFlags: 0
@@ -952,7 +952,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

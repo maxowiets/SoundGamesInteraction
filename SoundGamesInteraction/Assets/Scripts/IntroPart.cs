@@ -34,29 +34,29 @@ public class IntroPart : MonoBehaviour
     IEnumerator IntroScene()
     {
         //START INTRO SCENE
-        narratorSource.clip = narratorClips[currentNarratorClip];                           //1
+        narratorSource.clip = narratorClips[currentNarratorClip];                         //1
         narratorSource.Play();
-        yield return new WaitForSeconds(narratorClips[currentNarratorClip].length);        
+        yield return new WaitForSeconds(narratorClips[currentNarratorClip++].length);        
 
         //START AMBIENT SOUND
         ambientSource.clip = ambientSoundClip;
         ambientSource.Play();
-        narratorSource.clip = narratorClips[currentNarratorClip++];                         //2
+        narratorSource.clip = narratorClips[currentNarratorClip];                         //2
         narratorSource.Play();
-        yield return new WaitForSeconds(narratorClips[currentNarratorClip].length);
+        yield return new WaitForSeconds(narratorClips[currentNarratorClip++].length);
 
         //SPAWN XYLOPHONE NPC
         currentXyloNPC = Instantiate(xyloNPC);
         Debug.Log(currentXyloNPC);
         yield return new WaitForSeconds(3f);
 
-        narratorSource.clip = narratorSource.clip = narratorClips[currentNarratorClip++];   //3
+        narratorSource.clip = narratorSource.clip = narratorClips[currentNarratorClip];   //3
         narratorSource.Play();
-        yield return new WaitForSeconds(narratorClips[currentNarratorClip].length + 4f);
+        yield return new WaitForSeconds(narratorClips[currentNarratorClip++].length + 4f);
 
-        narratorSource.clip = narratorSource.clip = narratorClips[currentNarratorClip++];   //4
+        narratorSource.clip = narratorSource.clip = narratorClips[currentNarratorClip];   //4
         narratorSource.Play();
-        yield return new WaitForSeconds(narratorClips[currentNarratorClip].length);
+        yield return new WaitForSeconds(narratorClips[currentNarratorClip++].length);
 
         //ENABLE PLAYER MOVEMENT
         globularMovement.enabled = true;
@@ -67,22 +67,19 @@ public class IntroPart : MonoBehaviour
             if (currentXyloNPC == null)
             {
                 currentXyloNPC = Instantiate(xyloNPC);
-                Debug.Log(currentXyloNPC);
-
             }
             //WAIT FOR PLAYER TO GET CLOSE
             while (!currentXyloNPC.GetComponentInChildren<NPC>().playerIsClose)
             {
-                Debug.Log("test");
                 yield return 0;
             }
             globularMovement.enabled = false;
             yield return new WaitForSeconds(1f);
 
             //NPC NOTICED YOU
-            narratorSource.clip = narratorSource.clip = narratorClips[currentNarratorClip++];//5
+            narratorSource.clip = narratorSource.clip = narratorClips[currentNarratorClip];//5
             narratorSource.Play();
-            yield return new WaitForSeconds(narratorClips[currentNarratorClip].length);
+            yield return new WaitForSeconds(narratorClips[currentNarratorClip++].length);
 
             //ENABLE PLAYER INTERACTION WITH NPC
             playerInteraction.enabled = true;
@@ -105,19 +102,25 @@ public class IntroPart : MonoBehaviour
             //PLAYER MADE THE WRONG CHOICE
             if (!playerDidGood)
             {
-                narratorSource.clip = narratorSource.clip = narratorClips[currentNarratorClip++];   //6
+                narratorSource.clip = narratorSource.clip = narratorClips[currentNarratorClip];   //6
                 narratorSource.Play();
+                yield return new WaitForSeconds(narratorClips[currentNarratorClip++].length);
                 currentNarratorClip -= 2;
-                yield return new WaitForSeconds(narratorClips[currentNarratorClip].length);
+                playerInteraction.enabled = false;
             }
         }
 
         //PLAYER MADE THE RIGHT CHOICE
-        narratorSource.clip = narratorSource.clip = narratorClips[currentNarratorClip++];           //7
+        currentNarratorClip++;
+        narratorSource.clip = narratorSource.clip = narratorClips[currentNarratorClip];           //7
         narratorSource.Play();
-        yield return new WaitForSeconds(narratorClips[currentNarratorClip].length);
+        yield return new WaitForSeconds(narratorClips[currentNarratorClip++].length);
+
+        narratorSource.clip = narratorSource.clip = narratorClips[currentNarratorClip];           //7.2
+        narratorSource.Play();
+        yield return new WaitForSeconds(narratorClips[currentNarratorClip++].length);
 
         //LOAD IN NEW PART OF GAME
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

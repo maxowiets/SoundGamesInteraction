@@ -158,13 +158,14 @@ MonoBehaviour:
   globularMovement: {fileID: 1585057941}
   playerInteraction: {fileID: 443501563}
   narratorClips:
-  - {fileID: 8300000, guid: 1a09bc055e298a84985fc26526b98d65, type: 3}
-  - {fileID: 8300000, guid: 1a09bc055e298a84985fc26526b98d65, type: 3}
-  - {fileID: 8300000, guid: 1a09bc055e298a84985fc26526b98d65, type: 3}
-  - {fileID: 8300000, guid: 1a09bc055e298a84985fc26526b98d65, type: 3}
-  - {fileID: 8300000, guid: 1a09bc055e298a84985fc26526b98d65, type: 3}
-  - {fileID: 8300000, guid: cd0b944bb20f8d74b8fd8925a8bf9fb5, type: 3}
-  - {fileID: 8300000, guid: 47cb534f39ed14f4ea692f3f7c2afd95, type: 3}
+  - {fileID: 8300000, guid: 1257d3cd9f7d8af469e5da2fb8065ea2, type: 3}
+  - {fileID: 8300000, guid: 95d587672d3512c4aab33b317b15d6c2, type: 3}
+  - {fileID: 8300000, guid: 1436400a8fba88749b5a9cd375d61615, type: 3}
+  - {fileID: 8300000, guid: 85c0e6ae855034a4c96ff13fa85e281a, type: 3}
+  - {fileID: 8300000, guid: 6859ecc95802e114f9ada0836b6882bd, type: 3}
+  - {fileID: 8300000, guid: 0b2625fec08edad4f99219fec552e320, type: 3}
+  - {fileID: 8300000, guid: 4ad85fcf432c51a45a90643a9d46f05f, type: 3}
+  - {fileID: 8300000, guid: b7981690adeefa84f9ab9c47d64d5d99, type: 3}
   ambientSoundClip: {fileID: 8300000, guid: 1a09bc055e298a84985fc26526b98d65, type: 3}
 --- !u!4 &371712620
 Transform:

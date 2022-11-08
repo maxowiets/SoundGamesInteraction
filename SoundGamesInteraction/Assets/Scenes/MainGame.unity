@@ -576,7 +576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &629049717
 Transform:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689829742}
   m_Layer: 0
-  m_Name: NPC (4)
+  m_Name: Xylo Major
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -878,7 +878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 976046624}
   m_Layer: 0
-  m_Name: NPC (1)
+  m_Name: Trumpet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1071,8 +1071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0a32129f78205439fcf332066ff875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSound: {fileID: 8300000, guid: f04bc57a4ab9395438d11dc179b321a3, type: 3}
-  wantsMajorSound: 1
+  idleSound: {fileID: 8300000, guid: 0f3e0d0c661828d45a971d0690122ddb, type: 3}
+  wantsMajorSound: 0
   majorClip: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
   minorClip: {fileID: 8300000, guid: dd5b8db945fd8e74d941c58dfddd06e3, type: 3}
   positiveSound: {fileID: 8300000, guid: e2653cf87b6686b4c9258f1caffed955, type: 3}
@@ -1303,7 +1303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1362039512
 Transform:
   m_ObjectHideFlags: 0
@@ -1491,13 +1491,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0a32129f78205439fcf332066ff875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSound: {fileID: 8300000, guid: f04bc57a4ab9395438d11dc179b321a3, type: 3}
-  wantsMajorSound: 1
-  majorClip: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
-  minorClip: {fileID: 8300000, guid: dd5b8db945fd8e74d941c58dfddd06e3, type: 3}
-  positiveSound: {fileID: 8300000, guid: e2653cf87b6686b4c9258f1caffed955, type: 3}
-  negativeSound: {fileID: 8300000, guid: 94c630e424033b1488d868a54cc5fd18, type: 3}
-  huhSound: {fileID: 8300000, guid: acd4d6ad083200e4291b0630e091dc0a, type: 3}
+  idleSound: {fileID: 8300000, guid: 0a15e3e5c6aff0345896ff57dc8e4704, type: 3}
+  wantsMajorSound: 0
+  majorClip: {fileID: 0}
+  minorClip: {fileID: 8300000, guid: a6b9eddbf8793c946ac3cb88d322bf54, type: 3}
+  positiveSound: {fileID: 0}
+  negativeSound: {fileID: 8300000, guid: 9f6947f5e458e034399fee40aaf6c92f, type: 3}
+  huhSound: {fileID: 0}
   interactionRange: 2
   playerIsClose: 0
 --- !u!135 &1422001491
@@ -1988,13 +1988,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0a32129f78205439fcf332066ff875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSound: {fileID: 8300000, guid: 0f3e0d0c661828d45a971d0690122ddb, type: 3}
-  wantsMajorSound: 0
-  majorClip: {fileID: 8300000, guid: 249932b0da185504495229ad86634591, type: 3}
-  minorClip: {fileID: 8300000, guid: dd5b8db945fd8e74d941c58dfddd06e3, type: 3}
-  positiveSound: {fileID: 8300000, guid: e2653cf87b6686b4c9258f1caffed955, type: 3}
-  negativeSound: {fileID: 8300000, guid: 94c630e424033b1488d868a54cc5fd18, type: 3}
-  huhSound: {fileID: 8300000, guid: acd4d6ad083200e4291b0630e091dc0a, type: 3}
+  idleSound: {fileID: 8300000, guid: 90851daa6fdca0b49add02403b5b2410, type: 3}
+  wantsMajorSound: 1
+  majorClip: {fileID: 8300000, guid: 355eb483b41350049af7badf4f8d3a18, type: 3}
+  minorClip: {fileID: 0}
+  positiveSound: {fileID: 0}
+  negativeSound: {fileID: 8300000, guid: 324710b9eca4b384aa389b19c3865ffa, type: 3}
+  huhSound: {fileID: 0}
   interactionRange: 2
   playerIsClose: 0
 --- !u!135 &1799969583
@@ -2108,7 +2108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102533291}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Violin Minor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
